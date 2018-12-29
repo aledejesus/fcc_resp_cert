@@ -1,0 +1,8 @@
+@font-face {
+  font-family: Ringbearer;
+  src: url(./ringbearer.ttf);
+}
+
+#title {
+  font-family: Ringbearer;
+}
