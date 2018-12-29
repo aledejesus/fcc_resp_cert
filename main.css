@@ -3,6 +3,63 @@
   src: url(./ringbearer.ttf);
 }
 
+body {
+  margin: 12px;
+  font-family: "DejaVu serif", serif;
+  text-align: center;
+}
+
+body * {
+  width: 100%;
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+img {
+  height: auto;
+  margin:auto;
+}
+
+#image {
+  min-width: 200px;
+  max-width: 600px;
+}
+
 #title {
+  font-size: 3.5em;
   font-family: Ringbearer;
+}
+
+#tribute-info {
+  text-align: justify;
+}
+
+#tribute-link-container {
+  text-align: right;
+}
+
+.small-text {
+  font-size: 0.9em;
+}
+
+@media (max-width: 699px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 799px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 18px;
+  }
 }
