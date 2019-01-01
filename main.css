@@ -7,6 +7,8 @@ body {
   margin: 12px;
   font-family: "DejaVu serif", serif;
   text-align: center;
+  color: #8b4513;
+  background-color: #f5f5dc;
 }
 
 body * {
@@ -21,7 +23,12 @@ main {
 
 img {
   height: auto;
-  margin:auto;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #16801b;
 }
 
 #image {
@@ -32,6 +39,7 @@ img {
 #title {
   font-size: 3.5em;
   font-family: Ringbearer;
+  color: #8b4513;
 }
 
 #tribute-info {
@@ -39,11 +47,27 @@ img {
 }
 
 #tribute-link-container {
-  text-align: right;
+  text-align: center;
+}
+
+#tribute-link-container > * {
+  display: inline-block;
+  width: auto;
+}
+
+#tribute-link {  /* for responsiveness purposes */
+  min-width: 40px;
+  min-height: 40px;
 }
 
 .small-text {
   font-size: 0.9em;
+}
+
+@media (max-width: 425px) {
+  #title {
+    font-size: 3em;
+  }
 }
 
 @media (max-width: 699px) {
