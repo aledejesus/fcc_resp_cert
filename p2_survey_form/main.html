@@ -9,8 +9,17 @@
       <h1 id="title">Survey Form</h1>
       <p id="description">Description lorem ipsum dolor sit amet<p>
       <form id="survey-form">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Full name" required>
+        <label id="email-label" for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="test@example.com" required>
+        <label id="number-label" for="number">Number</label>
+        <input id="number" name="number" type="number" min="1" max="99999999999" placeholder="8091231234" required>
+        <label id="dropdown-label" for="dropdown">Gender</label>
+        <select id="dropdown">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
       </form>
       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </main>
