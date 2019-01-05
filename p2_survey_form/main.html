@@ -9,17 +9,56 @@
       <h1 id="title">Survey Form</h1>
       <p id="description">Description lorem ipsum dolor sit amet<p>
       <form id="survey-form">
+        <h2>Surveyee information</h2>
         <label id="name-label" for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Full name" required>
         <label id="email-label" for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="test@example.com" required>
         <label id="number-label" for="number">Number</label>
         <input id="number" name="number" type="number" min="1" max="99999999999" placeholder="8091231234" required>
-        <label id="dropdown-label" for="dropdown">Gender</label>
+        <label id="dropdown-label" for="dropdown">State</label>
         <select id="dropdown">
-          <option value="male">Male</option>
-          <option value="female">Female</option>
+          <option value="male">Florida</option>
+          <option value="female">New York</option>
         </select>
+        <fieldset>
+          <legend>Gender</legend>
+          <input id="male-radio" name="gender" type="radio" value="male">
+          <label for="male-radio">Male</label>
+          <input id="female-radio" name="gender" type="radio" value="female">
+          <label for="female-radio">Female</label>
+        </fieldset>
+        <h2>Survey questions</h2>
+        <fieldset>
+          <legend>Which color do you prefer?</legend>
+          <input id="blue-radio" name="color" type="radio" value="blue">
+          <label for="blue-radio">Blue</label>
+          <input id="red-radio" name="color" type="radio" value="red">
+          <label for="red-radio">Red</label>
+          <input id="yellow-radio" name="color" type="radio" value="yellow">
+          <label for="yellow-radio">Yellow</label>
+        </fieldset>
+        <fieldset>
+          <legend>Which animal is your favorite?</legend>
+          <input id="dog-radio" name="animal" type="radio" value="dog">
+          <label for="dog-radio">Dog</label>
+          <input id="cat-radio" name="animal" type="radio" value="cat">
+          <label for="cat-radio">Cat</label>
+          <input id="oyster-radio" name="animal" type="radio" value="oyster">
+          <label for="oyster-radio">Oyster</label>
+          <input id="other-radio" name="animal" type="radio" value="other">
+          <label for="other-radio">Other</label>
+        </fieldset>
+        <label>Comments</label>
+        <textarea id="comments-box" name="comments" placeholder="Write your comments here ..." rows="5" cols="60">
+        </textarea>
+        <input id="terms-checkbox" name="terms" type="checkbox" value="terms">
+        <label for="terms-checkbox">I have read the terms and conditions</label>
+        <input id="confidential-checkbox" name="confidential" type="checkbox" value="confidential">
+        <label for="confidential-checkbox">I want my answers to be confidential</label>
+        <input id="newsletter-checkbox" name="newsletter" type="checkbox" value="newsletter" checked>
+        <label for="newsletter-checkbox">I want to receive the newsletter</label>
+        <input id="submit" name="submit" type="submit" value="Submit">
       </form>
       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </main>
