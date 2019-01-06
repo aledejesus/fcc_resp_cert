@@ -1,0 +1,48 @@
+body {
+  font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+body > * {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header {
+  background: #add8e6;
+  padding-left: 1em;
+}
+
+main {
+  background: #add8e64d;
+  padding: 0px 1em 1em 1em;
+}
+
+input, select, textarea {
+  display: block;
+}
+
+textarea {
+  width: 99%;
+  height: 60px;
+}
+
+input[type=radio], input[type=checkbox] {
+  display: inline-block;
+}
+
+#description {
+  text-align: justify;
+}
+
+#name, #email {
+  width: 50%;
+}
+
+#number, #dropdown {
+  width: 180px;
+}
