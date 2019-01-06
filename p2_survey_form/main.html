@@ -5,22 +5,37 @@
     <link rel="stylesheet" type="text/css" href="main.css">
   </head>
   <body>
-    <main>
+    <header>
       <h1 id="title">Survey Form</h1>
-      <p id="description">Description lorem ipsum dolor sit amet<p>
+    </header>
+    <main>
+      <p id="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+        vel lobortis odio. Donec blandit massa nec venenatis suscipit.
+        Quisque vel dictum urna. Pellentesque aliquet fermentum quam sed
+        hendrerit. Praesent ac diam neque. Mauris finibus odio sed sapien
+        mattis, non luctus tellus ultrices. Vivamus molestie ex libero,
+        in hendrerit tellus semper id. Nam a tellus diam. Curabitur aliquet
+        nunc quis dui laoreet, quis rhoncus dui vestibulum. Nunc quis urna
+        mattis, pulvinar magna a, pharetra turpis.
+      <p>
       <form id="survey-form">
         <h2>Surveyee information</h2>
         <label id="name-label" for="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Full name" required>
+        <br>
         <label id="email-label" for="email">Email</label>
         <input id="email" name="email" type="email" placeholder="test@example.com" required>
+        <br>
         <label id="number-label" for="number">Number</label>
         <input id="number" name="number" type="number" min="1" max="99999999999" placeholder="8091231234" required>
+        <br>
         <label id="dropdown-label" for="dropdown">State</label>
         <select id="dropdown">
           <option value="male">Florida</option>
           <option value="female">New York</option>
         </select>
+        <br>
         <fieldset>
           <legend>Gender</legend>
           <input id="male-radio" name="gender" type="radio" value="male">
@@ -38,6 +53,7 @@
           <input id="yellow-radio" name="color" type="radio" value="yellow">
           <label for="yellow-radio">Yellow</label>
         </fieldset>
+        <br>
         <fieldset>
           <legend>Which animal is your favorite?</legend>
           <input id="dog-radio" name="animal" type="radio" value="dog">
@@ -49,15 +65,20 @@
           <input id="other-radio" name="animal" type="radio" value="other">
           <label for="other-radio">Other</label>
         </fieldset>
-        <label>Comments</label>
-        <textarea id="comments-box" name="comments" placeholder="Write your comments here ..." rows="5" cols="60">
-        </textarea>
+        <br>
+        <label for="comments-box">Comments</label>
+        <textarea id="comments-box" name="comments" placeholder="Write your comments here ..."></textarea>
+        <br>
         <input id="terms-checkbox" name="terms" type="checkbox" value="terms">
         <label for="terms-checkbox">I have read the terms and conditions</label>
+        <br>
         <input id="confidential-checkbox" name="confidential" type="checkbox" value="confidential">
         <label for="confidential-checkbox">I want my answers to be confidential</label>
+        <br>
         <input id="newsletter-checkbox" name="newsletter" type="checkbox" value="newsletter" checked>
         <label for="newsletter-checkbox">I want to receive the newsletter</label>
+        <br>
+        <br>
         <input id="submit" name="submit" type="submit" value="Submit">
       </form>
       <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
