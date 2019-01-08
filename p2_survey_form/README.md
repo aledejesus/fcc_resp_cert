@@ -1,4 +1,4 @@
 # freeCodeCamp - Responsive Web Design Certification
-## Project 1: Build a Survey Form
+## Project 2: Build a Survey Form
 ### Description
 Pending ...
