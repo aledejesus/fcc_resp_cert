@@ -1,0 +1,43 @@
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: justify;
+}
+
+header {
+  width: 800px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: calc((100% - 800px) / 2);
+  background-color: #9cd4e3;
+}
+
+nav {
+  width: calc(100% - 100px);
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  margin-top: 100px;
+}
+
+form {
+  text-align: center;
+}
+#header-img {
+  width: 100px;
+  height: auto;
+}
+
+/* TODO: create media query to change header width to 100% when width < 800 */
+/* LOGO IN NAV BAR IS TOO BIG. TRY PUTTING THE LOGO IN THE BODY ALOGSIDE THE COMPANY NAME*/
