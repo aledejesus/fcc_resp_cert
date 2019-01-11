@@ -7,11 +7,13 @@ body {
   font-size: 16px;
   font-family: sans-serif;
   text-align: justify;
+
+  --logo-size: 60px;
 }
 
 header {
   width: 800px;
-  height: 100px;
+  height: var(--logo-size);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,20 +24,25 @@ header {
 }
 
 nav {
-  width: calc(100% - 100px);
+  width: calc(100% - var(--logo-size));
   display: flex;
   justify-content: space-around;
 }
 
 main {
-  margin-top: 100px;
+  margin-top: var(--logo-size);
 }
 
 form {
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
 #header-img {
-  width: 100px;
+  width: var(--logo-size);
   height: auto;
 }
 
