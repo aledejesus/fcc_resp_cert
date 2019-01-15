@@ -9,6 +9,7 @@ body {
   text-align: justify;
 
   --logo-size: 60px;
+  --primary-background-color: #9cd4e3;
 }
 
 header {
@@ -20,7 +21,7 @@ header {
   position: fixed;
   top: 0px;
   left: calc((100% - 800px) / 2);
-  background-color: #9cd4e3;
+  background-color: var(--primary-background-color);
 }
 
 nav {
@@ -38,7 +39,13 @@ form {
 }
 
 h1 {
+  margin-top: 0px;
+  padding-top: var(--logo-size);
   text-align: center;
+}
+
+main > section:nth-child(2n - 1) {
+  background-color: var(--primary-background-color);
 }
 
 #header-img {
@@ -46,5 +53,26 @@ h1 {
   height: auto;
 }
 
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#home > span {
+  font-size: 3em;
+  color: #fe081f;
+}
 /* TODO: create media query to change header width to 100% when width < 800 */
-/* LOGO IN NAV BAR IS TOO BIG. TRY PUTTING THE LOGO IN THE BODY ALOGSIDE THE COMPANY NAME*/
+/* TODO: modify HTML and CSS to extend background indefinitely but content only until 800 px*/
+/* TODO: check that paddings are good */
+/* TODO: consider changing the font (at least the one on the logo) */
+/* TODO: make the headers bigger and normalize the padding on the top and bottom of them */
+/* TODO: remove underline from anchor tags */
+/* TODO: remove visited styling from anchor tags */
+/* TODO: add different color on hover to anchor tags. Consider animations */
+/* TODO: make sure that all contrasts are ok */
+/* TODO: instead of hard color changes from one section to the other, consider a degradation */
+/* TODO: add contact information in about us section. Email, phone, address */
+/* TODO: update READMEs */
