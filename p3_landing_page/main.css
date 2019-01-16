@@ -1,26 +1,27 @@
 body {
+  --max-content-width: 800px;
+  --logo-size: 50px;
+  --primary-background-color: #9cd4e3;
+
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 800px;
+  max-width: var(--max-content-width);
   margin: auto;
   font-size: 16px;
   font-family: sans-serif;
   text-align: justify;
-
-  --logo-size: 60px;
-  --primary-background-color: #9cd4e3;
 }
 
 header {
-  width: 800px;
+  width: var(--max-content-width);
   height: var(--logo-size);
   display: flex;
   flex-direction: row;
   align-items: center;
   position: fixed;
   top: 0px;
-  left: calc((100% - 800px) / 2);
+  left: calc((100% - var(--max-content-width)) / 2);
   background-color: var(--primary-background-color);
 }
 
@@ -39,13 +40,23 @@ form {
 }
 
 h1 {
-  margin-top: 0px;
-  padding-top: var(--logo-size);
+  font-size: 2em;
+  margin: 0px;
+  padding: var(--logo-size) 0px;
   text-align: center;
+}
+
+main > section {
+  padding: 0px 10px 10px 10px;
 }
 
 main > section:nth-child(2n - 1) {
   background-color: var(--primary-background-color);
+}
+
+video {
+  width: 100%;
+  min-width: 300px;
 }
 
 #header-img {
@@ -64,11 +75,15 @@ main > section:nth-child(2n - 1) {
   font-size: 3em;
   color: #fe081f;
 }
-/* TODO: create media query to change header width to 100% when width < 800 */
+
+@media (max-width: 800px) {
+  header {
+    width: 100%;
+    left: 0px;
+  }
+}
 /* TODO: modify HTML and CSS to extend background indefinitely but content only until 800 px*/
-/* TODO: check that paddings are good */
 /* TODO: consider changing the font (at least the one on the logo) */
-/* TODO: make the headers bigger and normalize the padding on the top and bottom of them */
 /* TODO: remove underline from anchor tags */
 /* TODO: remove visited styling from anchor tags */
 /* TODO: add different color on hover to anchor tags. Consider animations */
@@ -76,3 +91,5 @@ main > section:nth-child(2n - 1) {
 /* TODO: instead of hard color changes from one section to the other, consider a degradation */
 /* TODO: add contact information in about us section. Email, phone, address */
 /* TODO: update READMEs */
+/* TODO: fix company name distribution when width is less than 800px */
+/* TODO: consider making the font smaller when width below 800px */
