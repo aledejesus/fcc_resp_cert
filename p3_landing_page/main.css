@@ -2,6 +2,8 @@ body {
   --max-content-width: 800px;
   --logo-size: 50px;
   --primary-background-color: #9cd4e3;
+  --font-color: #574255;
+  --brand-color: #fe081f;
 
   display: flex;
   flex-direction: column;
@@ -10,6 +12,7 @@ body {
   margin: auto;
   font-size: 16px;
   font-family: sans-serif;
+  color: var(--font-color);
   text-align: justify;
 }
 
@@ -36,6 +39,7 @@ main {
 }
 
 form {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -54,9 +58,24 @@ main > section:nth-child(2n - 1) {
   background-color: var(--primary-background-color);
 }
 
+section > p:first-of-type {
+  margin-top: 0px;
+}
+
 video {
   width: 100%;
   min-width: 300px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+a:hover {
+  animation-name: hover-animation;
+  animation-duration: 400ms;
+  animation-fill-mode: forwards;
 }
 
 #header-img {
@@ -73,7 +92,13 @@ video {
 
 #home > span {
   font-size: 3em;
-  color: #fe081f;
+  color: var(--brand-color);
+}
+
+@keyframes hover-animation {
+  100% {
+    color: var(--brand-color);
+  }
 }
 
 @media (max-width: 800px) {
@@ -84,10 +109,6 @@ video {
 }
 /* TODO: modify HTML and CSS to extend background indefinitely but content only until 800 px*/
 /* TODO: consider changing the font (at least the one on the logo) */
-/* TODO: remove underline from anchor tags */
-/* TODO: remove visited styling from anchor tags */
-/* TODO: add different color on hover to anchor tags. Consider animations */
-/* TODO: make sure that all contrasts are ok */
 /* TODO: instead of hard color changes from one section to the other, consider a degradation */
 /* TODO: add contact information in about us section. Email, phone, address */
 /* TODO: update READMEs */
