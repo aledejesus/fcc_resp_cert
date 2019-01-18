@@ -2,13 +2,13 @@ body {
   --max-content-width: 800px;
   --logo-size: 50px;
   --primary-background-color: #9cd4e3;
+  --header-color: #52adc6;
   --font-color: #574255;
   --brand-color: #fe081f;
 
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: var(--max-content-width);
   margin: auto;
   font-size: 16px;
   font-family: sans-serif;
@@ -17,21 +17,30 @@ body {
 }
 
 header {
-  width: var(--max-content-width);
+  width: 100%;
   height: var(--logo-size);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-color: var(--header-color);
+}
+
+header > div {
+  margin: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: fixed;
-  top: 0px;
-  left: calc((100% - var(--max-content-width)) / 2);
-  background-color: var(--primary-background-color);
+  max-width: var(--max-content-width);
 }
 
 nav {
   width: calc(100% - var(--logo-size));
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+nav > a {
+  color: black;
 }
 
 main {
@@ -52,13 +61,19 @@ h1 {
 
 main > section {
   padding: 0px 10px 10px 10px;
+  mar
+}
+
+section > div {
+  margin: auto;
+  max-width: var(--max-content-width);
 }
 
 main > section:nth-child(2n - 1) {
   background-color: var(--primary-background-color);
 }
 
-section > p:first-of-type {
+section > div > p:first-of-type {
   margin-top: 0px;
 }
 
@@ -81,16 +96,17 @@ a:hover {
 #header-img {
   width: var(--logo-size);
   height: auto;
+  margin-right: 30px;
 }
 
-#home {
+#home > div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-#home > span {
+#home span {
   font-size: 3em;
   color: var(--brand-color);
 }
@@ -101,13 +117,17 @@ a:hover {
   }
 }
 
-@media (max-width: 800px) {
-  header {
-    width: 100%;
-    left: 0px;
+@media (max-width: 835px) {
+  nav {
+    justify-content: space-around;
+  }
+
+  #header-img {
+    margin-right: 0px;
   }
 }
-/* TODO: modify HTML and CSS to extend background indefinitely but content only until 800 px*/
+/* TODO: check why logo test isn't passing */
+/* TODO: consider modifying description. Add bullet points */
 /* TODO: consider changing the font (at least the one on the logo) */
 /* TODO: instead of hard color changes from one section to the other, consider a degradation */
 /* TODO: add contact information in about us section. Email, phone, address */
