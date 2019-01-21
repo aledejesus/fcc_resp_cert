@@ -1,8 +1,14 @@
+@font-face {
+  font-family: Purisa;
+  src: url(./Purisa.ttf);
+}
+
 body {
   --max-content-width: 800px;
   --logo-size: 50px;
   --primary-background-color: #9cd4e3;
   --header-color: #52adc6;
+  --footer-color: #52adc6;
   --font-color: #574255;
   --brand-color: #fe081f;
   --transition-color: #9cd4e34d;
@@ -24,6 +30,7 @@ header {
   top: 0px;
   left: 0px;
   background-color: var(--header-color);
+  font-weight: bold;
 }
 
 header > div {
@@ -103,6 +110,21 @@ a:hover {
   animation-fill-mode: forwards;
 }
 
+footer {
+  width: 100%;
+  background-color: var(--footer-color);
+  font-size: 0.9em;
+}
+
+footer > div {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: var(--max-content-width);
+  padding: 10px 0px;
+}
+
 #header-img {
   width: var(--logo-size);
   height: auto;
@@ -118,6 +140,7 @@ a:hover {
 
 #company-name {
   font-size: 3em;
+  font-weight: bold;
   color: var(--brand-color);
   text-align: center;
 }
@@ -148,7 +171,8 @@ a:hover {
   #company-name {
     order: 1;
   }
+
+  footer {
+    font-size: 0.7em;
+  }
 }
-/* TODO: add contact information in about us section. Email, phone, address */
-/* TODO: update READMEs */
-/* TODO: add Purisa font to project */
