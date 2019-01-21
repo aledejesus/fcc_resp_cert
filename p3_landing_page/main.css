@@ -5,13 +5,14 @@ body {
   --header-color: #52adc6;
   --font-color: #574255;
   --brand-color: #fe081f;
+  --transition-color: #9cd4e34d;
 
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: auto;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: Purisa, sans-serif;
   color: var(--font-color);
   text-align: justify;
 }
@@ -31,6 +32,7 @@ header > div {
   flex-direction: row;
   align-items: center;
   max-width: var(--max-content-width);
+  height: 100%;
 }
 
 nav {
@@ -61,16 +63,24 @@ h1 {
 
 main > section {
   padding: 0px 10px 10px 10px;
-  mar
 }
 
 section > div {
   margin: auto;
   max-width: var(--max-content-width);
+  padding-bottom: 24px;
+}
+
+main > section:nth-child(2n) {
+  background-image: linear-gradient(var(--transition-color) 0%, transparent 5% 95%, var(--transition-color) 100%);
 }
 
 main > section:nth-child(2n - 1) {
-  background-color: var(--primary-background-color);
+  background-image: linear-gradient(var(--transition-color) 0%, var(--primary-background-color) 5% 95%, var(--transition-color) 100%);
+}
+
+main > section:first-child {
+  background-image: linear-gradient(var(--primary-background-color) 95%, var(--transition-color) 100%);
 }
 
 section > div > p:first-of-type {
@@ -106,9 +116,10 @@ a:hover {
   align-items: center;
 }
 
-#home span {
+#company-name {
   font-size: 3em;
   color: var(--brand-color);
+  text-align: center;
 }
 
 @keyframes hover-animation {
@@ -125,12 +136,19 @@ a:hover {
   #header-img {
     margin-right: 0px;
   }
+
+  #home > div {
+    flex-direction: column;
+  }
+
+  #big-logo {
+    order: 2;
+  }
+
+  #company-name {
+    order: 1;
+  }
 }
-/* TODO: check why logo test isn't passing */
-/* TODO: consider modifying description. Add bullet points */
-/* TODO: consider changing the font (at least the one on the logo) */
-/* TODO: instead of hard color changes from one section to the other, consider a degradation */
 /* TODO: add contact information in about us section. Email, phone, address */
 /* TODO: update READMEs */
-/* TODO: fix company name distribution when width is less than 800px */
-/* TODO: consider making the font smaller when width below 800px */
+/* TODO: add Purisa font to project */
