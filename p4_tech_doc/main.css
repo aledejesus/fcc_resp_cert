@@ -3,18 +3,26 @@ body {
 
   width: 100%;
   max-width: 1000px;
-  margin: 1em;
   font-size: 16px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
+a {
+  text-decoration: none;
+}
+
+hr {
+  width: 100%;
+}
+
 #navbar {
   width: var(--navbar-width);
+  padding: 1em;
   position: fixed;
-  top: 1em;
-  left: 1em;
+  top: 0;
+  left: 0;
 }
 
 #navbar > header {
@@ -33,7 +41,8 @@ body {
 
 #main-doc {
   width: 700px;
-  margin-left: var(--navbar-width);
+  margin-left: calc(var(--navbar-width) + 1em);
+  padding: 1em;
   text-align: justify;
 }
 
