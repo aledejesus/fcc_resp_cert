@@ -7,8 +7,7 @@
   <body>
     <nav id="navbar">
       <header>
-        <h1>Sample Technical Documentation</h1>
-        <hr>
+        <h1 id="doc-title">Sample Technical Documentation</h1>
         <a class="nav-link" href="#Lorem_ipsum_dolor">Lorem ipsum dolor</a>
         <hr>
         <a class="nav-link" href="#Suspendisse_dui_lorem">Suspendisse dui lorem</a>
@@ -62,12 +61,9 @@
           maximus a ac purus. Fusce sit amet rhoncus nisi. Donec turpis
           metus, aliquet non convallis vitae, rhoncus id est.
         </p>
-        <code>
-          <pre>
-          for i in range(len(lst)):
-              print(func(i))
-          </pre>
-        </code>
+<code><pre>
+for i in range(len(lst)):
+    print(func(i))</pre></code>
         <p>
           Ut blandit egestas nisi, ut vulputate lectus pellentesque vitae.
           Aenean imperdiet nunc arcu, porttitor volutpat sem dapibus at. Fusce
@@ -100,15 +96,12 @@
           tincidunt auctor. Suspendisse fringilla urna id metus lacinia
           tempor.
         </p>
-        <code>
-          <pre>
-          def awesome_func(*args, **kwargs):
-              if 'foo' in args:
-                  return 'Not awesome'
-              else:
-                  return 'Awesome'
-          </pre>
-        </code>
+<code><pre>
+def awesome_func(*args, **kwargs):
+    if 'foo' in args:
+        return 'Not awesome'
+    else:
+        return 'Awesome'</pre></code>
         <p>
           Ut luctus finibus enim at faucibus. Duis condimentum
           condimentum ultrices. Sed placerat vulputate orci, eu fermentum
@@ -117,13 +110,9 @@
           sodales id nibh a accumsan. Nam accumsan tellus quis tortor
           gravida placerat.
         </p>
-        <code>
-          <pre>
-          for i in range(len(lst)):
-              print(func(i))
-          </pre>
-        </code>
-
+<code><pre>
+for i in range(len(lst)):
+    print(func(i))</pre></code>
       </section>
       <section id="Aenean_accumsan_lacus_id_metus_malesuada" class="main-section">
         <header>Aenean accumsan lacus id metus malesuada</header>
@@ -136,20 +125,19 @@
           vulputate. Suspendisse sapien lorem, porttitor in ultrices eget,
           gravida in nisl.
         </p>
-        <code>
-          <pre>
-          import traceback
+<code><pre>
+import traceback
 
-          if 'Lorem ipsum' in text:
-              try:
-                  result = awesome_func(*args, **kwargs)
-              except Exception as e:
-                  print(traceback.format_exc())
-                  return None
-              else:
-                  return result
-          </pre>
-        </code>
+if 'Lorem ipsum' in text:
+    try:
+        result = awesome_func(
+          *args, **kwargs)
+    except Exception as e:
+        print(
+          traceback.format_exc())
+        return None
+    else:
+        return result</pre></code>
         <p>
           Suspendisse pretium efficitur nisi, id egestas augue condimentum
           nec. A euismod ligula pulvinar. Nulla eget odio lectus. Aliquam
@@ -165,15 +153,12 @@
           ac condimentum lacus. Aenean vel elit feugiat, maximus metus non,
           convallis odio. Sed sollicitudin efficitur consequat.
         </p>
-        <code>
-          <pre>
-          def awesome_func(*args, **kwargs):
-              if 'foo' in args:
-                  return 'Not awesome'
-              else:
-                  return 'Awesome'
-          </pre>
-        </code>
+<code><pre>
+def awesome_func(*args, **kwargs):
+    if 'foo' in args:
+        return 'Not awesome'
+    else:
+        return 'Awesome'</pre></code>
       </section>
       <section id="Mauris_convallis_turpis" class="main-section">
         <header>Mauris convallis turpis</header>
