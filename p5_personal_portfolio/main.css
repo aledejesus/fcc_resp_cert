@@ -1,6 +1,8 @@
 body {
   --navbar-height: 50px;
   --max-content-width: 1000px;
+  --project-tile-size: 200px;
+  --project-tile-margin: 1em;
 
   font-size: 16px;
   margin: 0px;
@@ -89,10 +91,44 @@ h1 {
 }
 
 .projects {
-  width: 100%;
+  width: calc(4 * (var(--project-tile-size) + 2 * var(--project-tile-margin)));
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
 }
+
+.project-tile {
+  display: inline-block;
+  width: var(--project-tile-size);
+  height: var(--project-tile-size);
+  background-color: #5ca0d8;
+  margin: var(--project-tile-margin);
+  padding: 0px 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /*position: relative;*/
+}
+
+.project-tile:hover {
+  animation-name: project-tile-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes project-tile-hover {
+  100% {
+    background-color: #007fe7;
+  }
+}
+
+.project-tile:a {
+  /*TODO: make the whole div clickable*/
+}
+
+/* TODO: work on responsiveness */
+/* TODO: see what more to add (maybe some hover effect on the nav bar links) */
