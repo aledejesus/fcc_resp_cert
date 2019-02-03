@@ -1,11 +1,15 @@
 body {
-  --navbar-height: 50px;
   --max-content-width: 1000px;
   --project-tile-size: 200px;
   --project-tile-margin: 1em;
+  --anchor-tag-min-size: 40px;
+  --navbar-height: calc(2em + var(--anchor-tag-min-size));
+  --font-size: 16px;
 
-  font-size: 16px;
+  font-family: serif;
+  font-size: var(--font-size);
   margin: 0px;
+  text-align: center;
 }
 
 body * {
@@ -27,15 +31,14 @@ a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  min-width: var(--anchor-tag-min-size);
+  min-height: var(--anchor-tag-min-size);
+  line-height: var(--anchor-tag-min-size);
 }
 
 #navbar > .container {
   flex-direction: row;
   justify-content: space-around;
-}
-
-#navbar > .container > a:nth-child(2n-1) {
-  margin-right: 2em;
 }
 
 main {
@@ -91,11 +94,11 @@ h1 {
 }
 
 .projects {
-  width: calc(4 * (var(--project-tile-size) + 2 * var(--project-tile-margin)));
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -110,8 +113,6 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  /*position: relative;*/
 }
 
 .project-tile:hover {
@@ -126,9 +127,33 @@ h1 {
   }
 }
 
-.project-tile:a {
-  /*TODO: make the whole div clickable*/
+.project-tile a {
+  line-height: var(--anchor-tag-min-size);
+  text-decoration: underline;
 }
 
-/* TODO: work on responsiveness */
-/* TODO: see what more to add (maybe some hover effect on the nav bar links) */
+.project-tile a:hover {
+  animation-name: project-link-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes project-link-hover {
+  100% {
+    line-height: calc(1.06 * var(--anchor-tag-min-size));
+    font-size: 1.06em;
+  }
+}
+
+@media (max-width: 739px) {
+  #projects {
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 586px) {
+  body {
+    font-size: 14px;
+  }
+}
